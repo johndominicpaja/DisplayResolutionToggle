@@ -50,9 +50,9 @@ def change_display_resolution():
 
     try:
         if current_resolution == "1920x1080":
-            run_nircmd("setdisplay", "1024", "706", "32")
-            current_resolution = "1024x706"
-            print("Resolution changed to 1024x706")
+            run_nircmd("setdisplay", "1440", "1080", "32")
+            current_resolution = "1440x1080"
+            print("Resolution changed to 1440x1080")
         else:
             run_nircmd("setdisplay", "1920", "1080", "32")
             current_resolution = "1920x1080"
@@ -64,7 +64,7 @@ def change_display_resolution():
 def main():
     find_nircmd()
     keyboard.add_hotkey("`", change_display_resolution)
-    print("Press ` to toggle resolution between 1024x706 and 1920x1080.")
+    print("Press ` to toggle resolution between 1440x1080 and 1920x1080.")
     keyboard.wait()
 
 
